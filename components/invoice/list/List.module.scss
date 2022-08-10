@@ -1,0 +1,27 @@
+.container {
+  margin-top: 2rem;
+
+  ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 1rem 1rem 0;
+    text-align: center;
+    margin-right: 2rem;
+    @media screen and (max-width: 48rem) {
+      padding: initial;
+      margin-right: initial;
+    }
+    li {
+      display: flex;
+      justify-content: space-between;
+      background: var(--secondary-color);
+      border-radius: 0.5rem;
+      margin-bottom: 2rem;
+      cursor: pointer;
+      h3 {
+        width: 10rem;
+      }
+    }
+  }
+}
