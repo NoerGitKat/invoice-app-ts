@@ -15,12 +15,21 @@
     li {
       display: flex;
       justify-content: space-between;
+      align-items: center;
       background: var(--secondary-color);
       border-radius: 0.5rem;
       margin-bottom: 2rem;
       cursor: pointer;
-      h3 {
+      padding: 1rem;
+
+      h3,
+      h4,
+      p {
         width: 10rem;
+      }
+
+      &:hover {
+        border: 1px solid #fff;
       }
     }
   }

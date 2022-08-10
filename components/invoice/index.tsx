@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 import { IInvoice } from "../../interfaces";
-import styles from "./InvoiceContainer.module.scss";
+
 import InvoiceList from "./list/List";
 
 export interface IInvoiceContainerProps {
@@ -13,7 +13,7 @@ export default function InvoiceContainer({ invoices }: IInvoiceContainerProps) {
   const toCreatePage = () => push("/create");
 
   return (
-    <section className={styles.container}>
+    <section>
       <header>
         <article>
           <h2>Invoices</h2>

@@ -11,9 +11,9 @@
   --pending-status-bg: rgba(255, 143, 0, 0.06);
   --pending-status-color: #ff8f00;
   --small-text-color: #888eb0;
-  --draft-bg: #252945;
+  --draft-status-bg: #f1f1f1;
+  --draft-status-color: #252945;
   --delete-btn-bg: #ec5757;
-  --edit-btn-bg: #252945;
 }
 
 /* Global Styles */
@@ -28,6 +28,13 @@ body {
 
 body {
   background: var(--body-bg);
+
+  main {
+    padding-left: 18rem;
+    @media screen and (max-width: 48rem) {
+      padding: 0 2rem 2rem;
+    }
+  }
 
   a {
     text-decoration: none;
