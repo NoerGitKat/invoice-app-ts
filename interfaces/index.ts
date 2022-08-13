@@ -14,6 +14,11 @@ export interface IInvoice {
   status: EStatus;
   paymentDue: string;
   description?: string;
+  products: {
+    name: string;
+    quantity: number;
+    price: number;
+  }[];
   clientAddress: {
     street?: string;
     city?: string;

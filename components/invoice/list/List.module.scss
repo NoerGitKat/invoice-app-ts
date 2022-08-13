@@ -12,6 +12,7 @@
       padding: initial;
       margin-right: initial;
     }
+
     li {
       display: flex;
       justify-content: space-between;
@@ -26,6 +27,16 @@
       h4,
       p {
         width: 10rem;
+
+        @media screen and (max-width: 48rem) {
+          max-width: 7rem;
+        }
+      }
+
+      h3 {
+        @media screen and (max-width: 48rem) {
+          margin-right: 0;
+        }
       }
 
       &:hover {

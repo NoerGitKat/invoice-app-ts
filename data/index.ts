@@ -5,13 +5,25 @@ export const invoices = [
   {
     createdAt: "yesterday",
     id: "DE21BS",
-    clientNamme: "Avatar Aang",
+    clientName: "Avatar Aang",
     date: new Date(),
     total: 500,
     status: EStatus.Paid,
     clientEmail: "anon@gmail.com",
     paymentDue: "paymentDue",
     description: "description",
+    products: [
+      {
+        name: "Web Development",
+        quantity: 4,
+        price: 200,
+      },
+      {
+        name: "Consulting",
+        quantity: 10,
+        price: 100,
+      },
+    ],
     clientAddress: {
       street: "street",
       city: "city",
@@ -26,14 +38,27 @@ export const invoices = [
     },
   },
   {
+    createdAt: "yesterday",
     id: "F52AC2",
-    clientNamme: "NoerGitKat",
+    clientName: "NoerGitKat",
     date: new Date(),
     total: 869,
     status: EStatus.Pending,
     clientEmail: "anon@gmail.com",
     paymentDue: "paymentDue",
     description: "description",
+    products: [
+      {
+        name: "Web Development",
+        quantity: 4,
+        price: 200,
+      },
+      {
+        name: "Consulting",
+        quantity: 1,
+        price: 100,
+      },
+    ],
     clientAddress: {
       street: "street",
       city: "city",
@@ -48,14 +73,27 @@ export const invoices = [
     },
   },
   {
+    createdAt: "yesterday",
     id: "53SFV5",
-    clientNamme: "Mapi",
+    clientName: "Mapi",
     date: new Date(),
     total: 200,
     status: EStatus.Draft,
     clientEmail: "anon@gmail.com",
     paymentDue: "paymentDue",
     description: "description",
+    products: [
+      {
+        name: "Web Development",
+        quantity: 8,
+        price: 200,
+      },
+      {
+        name: "Consulting",
+        quantity: 4,
+        price: 100,
+      },
+    ],
     clientAddress: {
       street: "street",
       city: "city",

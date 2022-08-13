@@ -21,7 +21,9 @@ export default function DetailsHeader({ status }: IDetailsHeaderProps) {
         <aside className={styles.header__buttons}>
           <button className={`btn ${styles["header__buttons--edit"]}`}>Edit</button>
           <button className={`btn ${styles["header__buttons--delete"]}`}>Delete</button>
-          <button className={`btn ${styles["header__buttons--paid"]}`}>Mark as paid</button>
+          {status !== EStatus.Paid && (
+            <button className={`btn ${styles["header__buttons--paid"]}`}>Mark as paid</button>
+          )}
         </aside>
       </header>
     </section>

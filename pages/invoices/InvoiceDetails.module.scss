@@ -1,2 +1,17 @@
 .main {
+  margin-right: 2rem;
+  .total {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+    h4 {
+      font-size: 1rem;
+      color: var(--small-text-color);
+    }
+    p {
+      font-size: 2rem;
+      color: #fff;
+    }
+  }
 }

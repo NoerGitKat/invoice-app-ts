@@ -1,4 +1,5 @@
 import { GetStaticPaths, GetStaticProps } from "next";
+import { useCallback } from "react";
 import { DetailsContent, DetailsHeader } from "../../components/invoice";
 import { invoices } from "../../data";
 import { IInvoice } from "../../interfaces";
@@ -9,10 +10,19 @@ export interface IInvoiceDetailsProps {
 }
 
 export default function InvoiceDetails({ invoice }: IInvoiceDetailsProps) {
+  const calcGrandTotal = useCallback(
+    () => invoice.products.reduce((total, product) => total + product.price * product.quantity, 0),
+    [invoice.products],
+  );
+
   return (
     <main className={styles.main}>
       <DetailsHeader status={invoice.status} />
       <DetailsContent invoice={invoice} />
+      <article className={styles.total}>
+        <h4>Grand Total</h4>
+        <p>${calcGrandTotal()}</p>
+      </article>
     </main>
   );
 }

@@ -1,5 +1,6 @@
 import { IInvoice } from "../../../interfaces";
 import styles from "./DetailsContent.module.scss";
+import DetailsItems from "./DetailsItems";
 
 export interface IDetailsContentProps {
   invoice: IInvoice;
@@ -51,10 +52,7 @@ export default function DetailsContent({ invoice }: IDetailsContentProps) {
         </aside>
       </article>
 
-      <article className={styles.details}>
-        <h4>Grand Total</h4>
-        <p>${invoice.total}</p>
-      </article>
+      <DetailsItems invoice={invoice} />
     </section>
   );
 }
