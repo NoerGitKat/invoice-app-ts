@@ -1,0 +1,39 @@
+.section {
+  background: var(--secondary-color);
+  margin-top: 1.5rem;
+  margin-right: 2rem;
+  padding: 2rem;
+  @media screen and (max-width: 48rem) {
+    margin-right: 0;
+  }
+  .details {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.201);
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+
+    h4 {
+      font-size: 0.8rem;
+      color: var(--small-text-color);
+      margin: 0 0 0.5rem;
+    }
+    p {
+      font-family: "Poppins Medium";
+      margin: 0 0;
+      color: #fff;
+      font-size: 1rem;
+    }
+
+    aside,
+    article {
+      width: 10rem;
+    }
+
+    &__aside {
+      div {
+        margin-bottom: 1.5rem;
+      }
+    }
+  }
+}

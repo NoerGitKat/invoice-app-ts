@@ -1,24 +1,29 @@
 import Link from "next/link";
 import { EStatus } from "../../../interfaces";
-import styles from "./SingleInvoice.module.scss";
 
 export interface ISingleInvoiceProps {
   id: string;
-  name: string;
+  clientName: string;
   date: Date;
   total: number;
   status: EStatus;
 }
 
-export default function SingleInvoice({ id, name, date, total, status }: ISingleInvoiceProps) {
+export default function SingleInvoice({
+  id,
+  clientName,
+  date,
+  total,
+  status,
+}: ISingleInvoiceProps) {
   return (
     <Link href={`/invoices/${id}`}>
-      <li className={styles.container}>
+      <li>
         <h3>{id}</h3>
-        <h4>{name}</h4>
+        <h4>{clientName}</h4>
         <p>{date.toLocaleDateString()}</p>
         <h3>${total}</h3>
-        <h3 className={`${styles.status} ${styles[`status--${status}`]}`}>{status}</h3>
+        <h3 className={`status status--${status}`}>{status}</h3>
       </li>
     </Link>
   );

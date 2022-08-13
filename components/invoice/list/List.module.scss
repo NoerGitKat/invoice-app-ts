@@ -31,6 +31,10 @@
       &:hover {
         border: 1px solid #fff;
       }
+
+      @media screen and (max-width: 48rem) {
+        flex-direction: column;
+      }
     }
   }
 }
