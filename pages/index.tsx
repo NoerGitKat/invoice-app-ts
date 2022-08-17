@@ -6,7 +6,7 @@ import { invoices } from "../data";
 const Home: NextPage = () => {
   const { push } = useRouter();
 
-  const toCreatePage = () => push("/create");
+  const toCreatePage = () => push("/invoices/new");
 
   return (
     <main>

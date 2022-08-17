@@ -6,7 +6,7 @@ export interface IDetailsItemsProps {
 }
 
 export default function DetailsItems({ invoice }: IDetailsItemsProps) {
-  const columns = ["Item", "Quantity", "Price", "Total"];
+  const columns = ["Product", "Quantity", "Price", "Total"];
   return (
     <section className={styles.section}>
       <article className={styles.details}>

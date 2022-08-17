@@ -9,7 +9,9 @@ export default function Menu({ menuItems }: IMenuProps) {
     <ul>
       {menuItems.map((item) => (
         <li key={item}>
-          <Link href={item.includes("Create") ? "/create" : `/${item.toLowerCase()}`}>{item}</Link>
+          <Link href={item.includes("Create") ? "/invoices/new" : `/${item.toLowerCase()}`}>
+            {item}
+          </Link>
         </li>
       ))}
     </ul>

@@ -1,0 +1,23 @@
+.main {
+  max-width: 48rem;
+  margin-right: 2rem;
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem 0;
+    aside {
+      button {
+        padding: 1rem;
+        border: 1px solid var(--border-color);
+        background-color: transparent;
+      }
+      &:last-child {
+        button {
+          border: none;
+          background-color: var(--primary-color);
+          margin-left: 2rem;
+        }
+      }
+    }
+  }
+}
