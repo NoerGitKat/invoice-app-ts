@@ -14,7 +14,7 @@ export interface IProductListProps {
   fields: (IProduct & Record<"id", string>)[];
   append: UseFieldArrayAppend<IInvoiceFormData, "products">;
   remove: UseFieldArrayRemove;
-  control: Control<IInvoiceFormData, any>;
+  control: Control<IInvoiceFormData, unknown>;
 }
 
 const Total = ({ control, index }: { control: Control<IInvoiceFormData>; index: number }) => {
@@ -30,13 +30,7 @@ const Total = ({ control, index }: { control: Control<IInvoiceFormData>; index: 
   return <>0</>;
 };
 
-export default function ProductList({
-  fields,
-  register,
-  control,
-  remove,
-  append,
-}: IProductListProps) {
+export default function ProductList({ fields, control, remove, append }: IProductListProps) {
   return (
     <section className={styles.section}>
       <h4>Products List</h4>
